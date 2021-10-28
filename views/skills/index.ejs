@@ -9,5 +9,12 @@
 </head>
 <body>
   <h1>Skills</h1>
+  <ul>
+  <% skills.forEach(s => { %>
+    <li>
+      <%= s.text %> 
+    </li>
+    <% }) %>
+  </ul>
 </body>
 </html>
