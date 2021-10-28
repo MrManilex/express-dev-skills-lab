@@ -12,7 +12,7 @@
   <ul>
   <% skills.forEach(s => { %>
     <li>
-      <%= s.text %> 
+      <a href="/skills/<%= s._id %>"><%= s.text %></a>
     </li>
     <% }) %>
   </ul>

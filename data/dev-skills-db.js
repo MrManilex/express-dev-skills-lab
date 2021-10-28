@@ -21,6 +21,18 @@ const find = (conditions, callback) => {
   }
 }
 
+const findById = (id, callback) =>{
+  try {
+    const todo = todos.find(todo => todo._id === parseInt(id))
+    if (!todo) throw new Error ('No todo was found')
+    return callback(null, todo)
+  } catch (error) {
+    console.log(error)
+    return callback(error, null)
+  }
+}
+
 export { 
-	find
+	find,
+  findById
 }
